@@ -13,5 +13,5 @@ struct Usuário {
     let idade: Int
     let match: Bool
     let frase: String
-    let foot: String
+    let foto: String
 }
