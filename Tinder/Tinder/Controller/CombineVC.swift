@@ -9,6 +9,10 @@ import UIKit
 
 class CombineVC: UIViewController {
     
+    var deslikeButton: UIButton = .iconFooter(named: "icone-deslike")
+    var superlikeButton: UIButton = .iconFooter(named: "icone-superlike")
+    var likeButton: UIButton = .iconFooter(named: "icone-like")
+    
     var usuarios: [Usuário] = []
     
     override func viewDidLoad() {
@@ -16,6 +20,7 @@ class CombineVC: UIViewController {
         
         view.backgroundColor = UIColor.systemGroupedBackground
         
+        self.adicionarFooter()
         self.buscaUsuários()
     }
     
@@ -23,6 +28,24 @@ class CombineVC: UIViewController {
         self.usuarios = UsuariosService.shared.buscaUsuarios()
         self.additionalCards()
     }
+}
+
+extension CombineVC {
+    func adicionarFooter() {
+        let stackView = UIStackView(arrangedSubviews: [deslikeButton, superlikeButton, likeButton])
+        stackView.distribution = .equalCentering
+        
+        view.addSubview(stackView)
+        stackView.preencher(
+            top: nil,
+            bottom: view.bottomAnchor,
+            leading: view.leadingAnchor,
+            trailing: view.trailingAnchor,
+            padding: .init(top: 0, left: 16, bottom: 34, right: 16)
+        )
+        
+    }
+    
 }
 
 extension CombineVC {

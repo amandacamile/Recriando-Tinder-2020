@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		6B30CA2529CB244400C2094D /* UsuariosService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B30CA2429CB244400C2094D /* UsuariosService.swift */; };
 		6B4A6BB329CBDE8A00F44CA2 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A6BB229CBDE8A00F44CA2 /* UIImageView.swift */; };
+		6B4A6BB529CBE5B900F44CA2 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A6BB429CBE5B900F44CA2 /* UIButton.swift */; };
 		6B4A778E29C9CF9B001D8FBA /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A778D29C9CF9B001D8FBA /* UILabel.swift */; };
 		6B4A779129C9D31E001D8FBA /* Usuário.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A779029C9D31E001D8FBA /* Usuário.swift */; };
 		6B56C1E829C6868D003ED148 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B56C1E729C6868D003ED148 /* AppDelegate.swift */; };
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		6B30CA2429CB244400C2094D /* UsuariosService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsuariosService.swift; sourceTree = "<group>"; };
 		6B4A6BB229CBDE8A00F44CA2 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
+		6B4A6BB429CBE5B900F44CA2 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		6B4A778D29C9CF9B001D8FBA /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
 		6B4A779029C9D31E001D8FBA /* Usuário.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Usuário.swift"; sourceTree = "<group>"; };
 		6B56C1E429C6868D003ED148 /* Tinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -124,6 +126,7 @@
 				6B56C20229C68F50003ED148 /* UIView.swift */,
 				6B4A778D29C9CF9B001D8FBA /* UILabel.swift */,
 				6B4A6BB229CBDE8A00F44CA2 /* UIImageView.swift */,
+				6B4A6BB429CBE5B900F44CA2 /* UIButton.swift */,
 			);
 			path = Lib;
 			sourceTree = "<group>";
@@ -207,6 +210,7 @@
 				6B30CA2529CB244400C2094D /* UsuariosService.swift in Sources */,
 				6B4A6BB329CBDE8A00F44CA2 /* UIImageView.swift in Sources */,
 				6B56C1E829C6868D003ED148 /* AppDelegate.swift in Sources */,
+				6B4A6BB529CBE5B900F44CA2 /* UIButton.swift in Sources */,
 				6B56C20329C68F50003ED148 /* UIView.swift in Sources */,
 				6B56C1EA29C6868D003ED148 /* SceneDelegate.swift in Sources */,
 			);
