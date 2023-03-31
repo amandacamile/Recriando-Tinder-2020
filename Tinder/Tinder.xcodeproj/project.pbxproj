@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6B30CA2529CB244400C2094D /* UsuariosService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B30CA2429CB244400C2094D /* UsuariosService.swift */; };
+		6B3B227F29D65EB4006A9E0B /* Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3B227E29D65EB4006A9E0B /* Loading.swift */; };
 		6B4A6BB329CBDE8A00F44CA2 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A6BB229CBDE8A00F44CA2 /* UIImageView.swift */; };
 		6B4A6BB529CBE5B900F44CA2 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A6BB429CBE5B900F44CA2 /* UIButton.swift */; };
 		6B4A778E29C9CF9B001D8FBA /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A778D29C9CF9B001D8FBA /* UILabel.swift */; };
@@ -25,6 +26,7 @@
 
 /* Begin PBXFileReference section */
 		6B30CA2429CB244400C2094D /* UsuariosService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsuariosService.swift; sourceTree = "<group>"; };
+		6B3B227E29D65EB4006A9E0B /* Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loading.swift; sourceTree = "<group>"; };
 		6B4A6BB229CBDE8A00F44CA2 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		6B4A6BB429CBE5B900F44CA2 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		6B4A778D29C9CF9B001D8FBA /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				6B56C1FF29C68D39003ED148 /* CombineCardView.swift */,
+				6B3B227E29D65EB4006A9E0B /* Loading.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -212,6 +215,7 @@
 				6B56C1E829C6868D003ED148 /* AppDelegate.swift in Sources */,
 				6B4A6BB529CBE5B900F44CA2 /* UIButton.swift in Sources */,
 				6B56C20329C68F50003ED148 /* UIView.swift in Sources */,
+				6B3B227F29D65EB4006A9E0B /* Loading.swift in Sources */,
 				6B56C1EA29C6868D003ED148 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
