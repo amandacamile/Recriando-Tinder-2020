@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MatchVC: UIViewController {
+class MatchVC: UIViewController, UITextFieldDelegate {
     
     var usuario: Usuário? {
         didSet {
@@ -60,6 +60,9 @@ class MatchVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+        
         view.backgroundColor = UIColor.blue
         
         view.addSubview(fotoImageView)
@@ -71,6 +74,7 @@ class MatchVC: UIViewController {
         
         fotoImageView.layer.addSublayer(gradient)
         
+        mensagemTxt.delegate = self
         mensagemLabel.textAlignment = .center
         
         voltarButton.addTarget(self, action: #selector(voltarClique), for: .touchUpInside)
@@ -87,6 +91,7 @@ class MatchVC: UIViewController {
                                        trailing: mensagemTxt.trailingAnchor,
                                        padding: .init(top: 0, left: 0, bottom: 0, right: 16)
         )
+        mensagemEnviarButton.addTarget(self, action: #selector(enviarMensagem), for: .touchUpInside)
         
         let stackView = UIStackView(arrangedSubviews: [likeImageView, mensagemLabel, mensagemTxt, voltarButton])
         stackView.axis = .vertical
@@ -102,7 +107,48 @@ class MatchVC: UIViewController {
         )
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.enviarMensagem()
+        
+        return true
+    }
+    
     @objc func voltarClique() {
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    @objc func enviarMensagem() {
+        if let mensagem = self.mensagemTxt.text {
+            print(mensagem)
+        }
+    }
+    
+    @objc func keyboardShow(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+            if let duracao = notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? Double {
+                UIView.animate(withDuration: duracao) {
+                    self.view.frame = CGRect(
+                        x: UIScreen.main.bounds.origin.x,
+                        y: UIScreen.main.bounds.origin.y,
+                        width: UIScreen.main.bounds.width,
+                        height: UIScreen.main.bounds.height - keyboardSize.height
+                    )
+                    self.view.layoutIfNeeded()
+                }
+            }
+        }
+    }
+    
+    @objc func keyboardHide(notification: NSNotification) {
+        if let duracao = notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? Double {
+            UIView.animate(withDuration: duracao) {
+                self.view.frame = UIScreen.main.bounds
+                self.view.layoutIfNeeded()
+            }
+        }
     }
 }
